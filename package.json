@@ -10,8 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "coffee-script": "^1.10.0",
-    "d3": "^3.5.14",
     "jade": "^1.11.0",
     "stylus": "^0.53.0"
+  },
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/c4collins/d3-frontend.git"
   }
 }
