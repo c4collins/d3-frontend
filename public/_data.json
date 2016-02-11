@@ -4,7 +4,11 @@
         "Bar Charts" : {},
         "Line Charts": {},
         "Pie Charts" : {
-                "Open Percentage": {}
-            }
+            "icon": "fa-pie-chart",
+            "charts": [
+                "Open Percentage",
+                "Bounce Percentage"
+            ]
+        }
     }
 }

@@ -1,0 +1,29 @@
+doctype
+html
+    head
+        title #{ title }
+
+        script(src="/static/js/libs/jquery/jquery-2.2.0.js")
+        script(src="/static/js/libs/jquery-ui/jquery-ui.js")
+        script(src="/static/js/libs/d3/d3.js"  charset="utf-8")
+        script(src="/static/js/libs/kickstart/kickstart.js")
+        script(src="/static/js/main.js")
+
+        link(href="/static/css/libs/jquery-ui/jquery-ui.css" rel="stylesheet")
+        link(href="/static/css/libs/jquery-ui/jquery-ui.structure.css" rel="stylesheet")
+        link(href="/static/css/libs/kickstart/kickstart.css" rel="stylesheet")
+        link(href="/static/css/main.css" rel="stylesheet")
+    body
+
+        section(id="header")
+            img(src="#{ logo_path }" class="logo")
+            h1 #{ title }
+            //- ul(class="menu")
+            //-     li
+            //-         a(href="/") Home
+            //-     li
+            //-         a(href="/contact.html") Contact
+            //-     li
+            //-         a(href="/login.html") Login
+            
+        != yield
