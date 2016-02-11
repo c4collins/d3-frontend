@@ -1,12 +1,19 @@
 section(id="sidebar")
     div(id="accordion-menu")
         each category_info, chart_category in public._data.charts
-            div
-                p=category_info.icon
+            h3
+                i(class="fa " + category_info.icon) 
+                !=chart_category+" (" + 0 + ")"
+            each item, name in category_info
+                if name == "charts"
+                    ul
+                        each chart_info, chart_name in item
+                            li
+                                button(class="chart_selector" data-chart-name=chart_name)!=chart_name
 
-            if Array(category_info.charts).length > 0
-                h3!=chart_category+" (" + Array(category_info.charts).length + ")"
-                each chart_name in Array(category_info.charts)
-                    button(class="chart_selector" data-chart-name=chart_name)!=chart_name
+            //- if Object.keys().length > 0
+            //-     h3!=chart_category+" (" + Object.keys(category_info.charts).length + ")"
+            //-     each chart_name in category_info.charts
+            //-         button(class="chart_selector" data-chart-name=chart_name)!=chart_name
 
 section(id="chart-container")

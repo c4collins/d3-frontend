@@ -1,14 +1,24 @@
 {
     "charts": {
-        "Area Charts": {},
-        "Bar Charts" : {},
-        "Line Charts": {},
+        "Area Charts": {
+            "icon": "fa-area-chart",
+            "charts": {}
+        },
+        "Bar Charts" : {
+            "icon": "fa-bar-chart",
+            "charts": {}
+        },
+        "Line Charts": {
+            "icon": "fa-line-chart",
+            "charts": {}
+        },
         "Pie Charts" : {
             "icon": "fa-pie-chart",
-            "charts": [
-                "Open Percentage",
-                "Bounce Percentage"
-            ]
+            "charts": {
+                "Open Percentage": {},
+                "Bounce Percentage": {},
+                "Bounce & Open Percentage": {}
+            }
         }
     }
 }
