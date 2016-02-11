@@ -1,1 +1,10 @@
-{}
+{
+    "charts": {
+        "Area Charts": {},
+        "Bar Charts" : {},
+        "Line Charts": {},
+        "Pie Charts" : {
+                "Open Percentage": {}
+            }
+    }
+}

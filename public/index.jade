@@ -1,15 +1,38 @@
 doctype
 html
     head
-        title Hello
+        title #{ title }
 
         script(src="/static/js/libs/jquery/jquery-2.2.0.js")
         script(src="/static/js/libs/jquery-ui/jquery-ui.js")
-        script(src="/static/js/libs/d3/d3.js")
+        script(src="/static/js/libs/d3/d3.js"  charset="utf-8")
+        script(src="/static/js/libs/kickstart/kickstart.js")
         script(src="/static/js/main.js")
 
         link(href="/static/css/libs/jquery-ui/jquery-ui.css" rel="stylesheet")
         link(href="/static/css/libs/jquery-ui/jquery-ui.structure.css" rel="stylesheet")
+        link(href="/static/css/libs/kickstart/kickstart.css" rel="stylesheet")
         link(href="/static/css/main.css" rel="stylesheet")
     body
-        h1 Hello World
+
+        section(id="header")
+            img(src="#{ logo_path }" class="logo")
+            h1 #{ title }
+            //- ul(class="menu")
+            //-     li
+            //-         a(href="/") Home
+            //-     li
+            //-         a(href="/contact.html") Contact
+            //-     li
+            //-         a(href="/login.html") Login
+
+        section(id="sidebar")
+            div(id="accordion-menu")
+                each charts, chart_category in public._data.charts
+                    if Object.keys(charts).length > 0
+                        h3!=chart_category +" (" + Object.keys(charts).length + ")"
+                        div
+                            each chart_info, chart_name in charts
+                                button(class="chart_selector" data-chart-name=chart_name)!=chart_name
+
+        section(id="chart-container")
